@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-forest: #172D29;
+    --bg-moss: #213B33;
+    --bg-cream: #F0EBDD;
+    --bg-cream-card: #FAF6ED;
+    --bg-sand: #D8CBB5;
+    --accent-gold: #B99A6A;
+    --text-charcoal: #292B28;
+    --text-muted: #85877F;
+    --accent-sage: #87988A;
+  }
+
+  body {
+    background-color: #F0EBDD;
+    color: #292B28;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E8E1CE;
+}
+::-webkit-scrollbar-thumb {
+  background: #B99A6A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9A7D4E;
+}
+
+/* Custom Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #D8CBB5;
+  height: 6px;
+  border-radius: 9999px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  background-color: #172D29;
+  border: 2px solid #B99A6A;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  box-shadow: 0 2px 6px rgba(23, 45, 41, 0.35);
+  transition: transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  background-color: #213B33;
+}
+
+/* Layered Card Surfaces */
+.surface-cream {
+  background-color: #FAF6ED;
+  border: 1px solid rgba(216, 203, 181, 0.85);
+  box-shadow: 0 4px 18px -2px rgba(23, 45, 41, 0.05), 0 1px 3px rgba(23, 45, 41, 0.03);
+}
+
+.surface-cream-elevated {
+  background-color: #FCFAF4;
+  border: 1px solid rgba(185, 154, 106, 0.3);
+  box-shadow: 0 10px 30px -4px rgba(23, 45, 41, 0.08);
+}
+
+.surface-forest {
+  background: linear-gradient(145deg, #1A342F 0%, #172D29 100%);
+  color: #F0EBDD;
+  border: 1px solid rgba(185, 154, 106, 0.3);
+  box-shadow: 0 12px 36px -6px rgba(14, 29, 26, 0.45);
+}
+
+.surface-moss {
+  background: linear-gradient(145deg, #25443B 0%, #1F3A32 100%);
+  color: #F0EBDD;
+  border: 1px solid rgba(135, 152, 138, 0.25);
+}
+
+.surface-sand {
+  background-color: #E7DDCC;
+  border: 1px solid rgba(185, 154, 106, 0.4);
+}
+
+/* Decorative subtle hairline rules */
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185, 154, 106, 0.4) 20%, rgba(185, 154, 106, 0.4) 80%, transparent);
+}
+
+.academic-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+}
+
+/* Subtle background academic guilloche pattern */
+.bg-guilloche {
+  background-image: radial-gradient(rgba(185, 154, 106, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.bg-dark-grid {
+  background-image: linear-gradient(to right, rgba(185, 154, 106, 0.06) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(185, 154, 106, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
